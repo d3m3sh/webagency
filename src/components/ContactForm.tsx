@@ -55,9 +55,9 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-20 bg-gray-900 text-white flex h-screen" id="contact">
+    <section className="py-20 bg-gray-900 text-white flex min-h-screen" id="contact">
       <Toaster position="top-right" />
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto my-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">{t('contact.title')}</h2>
           

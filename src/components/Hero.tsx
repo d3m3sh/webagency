@@ -13,8 +13,8 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-800 text-white">
-      <div className="container mx-auto px-6 py-32">
+    <section className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-purple-800 text-white  flex">
+      <div className="container my-auto mx-auto px-6 py-32 justify-center">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center gap-3 mb-6">
             <Code2 size={40} className="text-purple-400" />
