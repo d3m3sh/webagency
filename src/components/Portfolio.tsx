@@ -2,15 +2,23 @@ import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import terminalCV from '../assets/portfolio/terminal-cv.png';
+import naturePaysage from '../assets/portfolio/nature-paysage.png';
 
 const projects = [
+  {
+    title: "Nature Paysage",
+    description: "Réalisation d'une landing page moderne pour un paysagiste, mettant en avant ses services et projets.",
+    image: naturePaysage,
+    tags: ["Paysaiste", "Jardin", "Espace vert"],
+    url: "https://nature-paysage.vercel.app/"
+  },
   {
     title: "Terminal CV",
     description: "Interactive application designed as a computer terminal interface",
     image: terminalCV,
     tags: ["Terminal", "Interactive", "React"],
     url: "https://cv.demesh.link"
-  }
+  },
 ];
 
 export function Portfolio() {
