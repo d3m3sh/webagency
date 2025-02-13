@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import terminalCV from '../assets/portfolio/terminal-cv.png';
 import naturePaysage from '../assets/portfolio/nature-paysage.png';
+import eleganceInterieur from '../assets/portfolio/elegance-interieur.png';
 
 const projects = [
   {
@@ -11,6 +12,13 @@ const projects = [
     image: naturePaysage,
     tags: ["Paysaiste", "Jardin", "Espace vert"],
     url: "https://nature-paysage.vercel.app/"
+  },
+  {
+    title: "Élégance Interieur",
+    description: "Réalisation d'une landing page moderne pour une decoratrice d'interieur, mettant en avant ses services et projets.",
+    image: eleganceInterieur,
+    tags: ["Décoration", "Interieur", "Élégance"],
+    url: "https://elegance-interieur.vercel.app/"
   },
   {
     title: "Terminal CV",
