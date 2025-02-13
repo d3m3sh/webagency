@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>('fr');
 
   useEffect(() => {
     const path = location.pathname;
@@ -52,7 +52,7 @@ export const useLanguage = () => {
 
 const translations = {
   en: {
-    'hero.title': 'mesh webagency',
+    'hero.title': 'Web Solutions',
     'hero.subtitle': 'Crafting Digital Excellence, One Pixel at a Time',
     'hero.description': 'We transform your vision into stunning digital experiences. Our expert team delivers cutting-edge web solutions that drive results.',
     'hero.getStarted': 'Get Started',
@@ -115,17 +115,19 @@ const translations = {
     'pricing.note.content': 'Need something specific? Our enterprise solutions are tailored to your unique needs. Contact us to discuss your project requirements.',
   },
   fr: {
-    'hero.title': 'mesh webagency',
-    'hero.subtitle': 'Créer l\'Excellence Numérique, Pixel par Pixel',
-    'hero.description': 'Nous transformons votre vision en expériences numériques exceptionnelles. Notre équipe d\'experts propose des solutions web innovantes qui génèrent des résultats.',
+    'hero.title': 'Web Solutions',
+    'hero.subtitle': 'Soyez visible. Gagnez en crédibilité. Attirez plus de clients',
+    'hero.description': "Nous créons votre site vitrine sur mesure pour une présence en ligne efficace et impactante. Design, contenu, hébergement, maintenance: nous nous chargeons de tout.",
+    'hero.description2': "",
     'hero.getStarted': 'Commencer',
     'hero.ourWork': 'Nos Projets',
+    'hero.contactForm': 'Contact',
     'portfolio.title': 'Nos Derniers Projets',
     'testimonials.title': 'Ce Que Disent Nos Clients',
     'contact.title': 'Contactez-Nous',
     'contact.info': 'Informations de Contact',
     'contact.name': 'Nom',
-    'contact.email': 'Email',
+    'contact.email': 'Email', 
     'contact.message': 'Message',
     'contact.send': 'Envoyer le Message',
     'contact.sending': 'Envoi en cours...',

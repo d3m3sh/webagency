@@ -26,6 +26,10 @@ export function Hero() {
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
             {t('hero.description')}
           </p>
+          {t('hero.description2') != 'hero.description2' && <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
+            {t('hero.description2')}
+          </p>
+}
           <div className="flex gap-4">
             <button 
               onClick={() => scrollToSection('pricing')}
