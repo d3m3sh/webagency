@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import terminalCV from '../assets/portfolio/terminal-cv.png';
 import naturePaysage from '../assets/portfolio/nature-paysage.png';
 import eleganceInterieur from '../assets/portfolio/elegance-interieur.png';
+import techExpert from '../assets/portfolio/tech-expert.png';
 
 const projects = [
   {
@@ -19,6 +20,13 @@ const projects = [
     image: eleganceInterieur,
     tags: ["Décoration", "Interieur", "Élégance"],
     url: "https://elegance-interieur.vercel.app/"
+  },
+  {
+    title: "Tech Expert",
+    description: "Réalisation d'une landing page moderne pour un informaticien indépendant.",
+    image: techExpert,
+    tags: ["Décoration", "Interieur", "Élégance"],
+    url: "https://tech-expert.vercel.app/"
   },
   {
     title: "Terminal CV",
