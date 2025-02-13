@@ -22,7 +22,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (langFromPath && (langFromPath === 'en' || langFromPath === 'fr')) {
       setLanguageState(langFromPath);
     } else {
-      navigate(`/en${path}`, { replace: true });
+      navigate(`/fr${path}`, { replace: true });
     }
   }, [location.pathname]);
 
