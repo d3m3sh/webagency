@@ -117,8 +117,8 @@ const translations = {
   fr: {
     'hero.title': 'Web Solutions',
     'hero.subtitle': 'Soyez visible. Gagnez en crédibilité. Attirez plus de clients',
-    'hero.description': "Nous créons votre site vitrine sur mesure pour une présence en ligne efficace et impactante. Design, contenu, hébergement, maintenance: nous nous chargeons de tout.",
-    'hero.description2': "",
+    'hero.description': "Nous créons votre site vitrine sur mesure pour une présence en ligne efficace et impactante.",
+    'hero.description2': "Design, contenu, hébergement, maintenance: nous nous chargeons de tout.",
     'hero.getStarted': 'Commencer',
     'hero.ourWork': 'Nos Projets',
     'hero.contactForm': 'Contact',

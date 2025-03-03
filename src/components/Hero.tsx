@@ -23,13 +23,13 @@ export function Hero() {
           <h2 className="text-xl md:text-2xl text-purple-200 mb-8">
             {t('hero.subtitle')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-2">
             {t('hero.description')}
           </p>
+
           {t('hero.description2') != 'hero.description2' && <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
             {t('hero.description2')}
-          </p>
-}
+          </p>}
           <div className="flex gap-4">
             <button 
               onClick={() => scrollToSection('pricing')}
