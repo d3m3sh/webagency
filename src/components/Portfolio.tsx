@@ -25,16 +25,9 @@ const projects = [
     title: "Tech Expert",
     description: "Réalisation d'une landing page moderne pour un informaticien indépendant.",
     image: techExpert,
-    tags: ["Décoration", "Interieur", "Élégance"],
+    tags: ["Informatique", "Tech", "Dépannage"],
     url: "https://tech-expert.vercel.app/"
-  },
-  {
-    title: "Terminal CV",
-    description: "Interactive application designed as a computer terminal interface",
-    image: terminalCV,
-    tags: ["Terminal", "Interactive", "React"],
-    url: "https://cv.demesh.link"
-  },
+  }
 ];
 
 export function Portfolio() {
