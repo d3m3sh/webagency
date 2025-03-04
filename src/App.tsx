@@ -7,25 +7,63 @@ import { LanguageSwitch } from './components/LanguageSwitch';
 import { Pricing } from './components/Pricing';
 import OrderComplete from './components/stripe/OrderComplete';
 
-function MainContent() {
+function MainLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
       <LanguageSwitch />
+      {children}
+    </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <MainLayout>
       <Hero />
       <Pricing />
       <Portfolio />
       {/* <Testimonials /> */}
       <ContactForm />
-    </div>
+    </MainLayout>
+  );
+}
+
+function PricingPage() {
+  return (
+    <MainLayout>
+      <Pricing />
+    </MainLayout>
+  );
+}
+
+function PortfolioPage() {
+  return (
+    <MainLayout>
+      <Portfolio />
+    </MainLayout>
+  );
+}
+
+function ContactPage() {
+  return (
+    <MainLayout>
+      <ContactForm />
+    </MainLayout>
   );
 }
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="fr" replace />} />
-      <Route path="/:lang/*" element={<MainContent />} />
-      <Route path="/:lang/order/complete" element={<OrderComplete />} />
+      <Route path="/" element={<Navigate to="/fr" replace />} />
+      <Route path="/:lang">
+        <Route index element={<HomePage />} />
+
+        <Route path="tarifs" element={<PricingPage />} />
+        <Route path="portfolio" element={<PortfolioPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="order/complete" element={<OrderComplete />} />
+      </Route>
     </Routes>
   );
 }
