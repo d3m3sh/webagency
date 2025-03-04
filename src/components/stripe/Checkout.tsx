@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import CheckoutForm from "./checkoutForm";
+import CheckoutForm from "./CheckoutForm";
 
 const initStripe = async () => {
     const response = await fetch('https://payment.web-solutions.pro/api/publishable-key', {

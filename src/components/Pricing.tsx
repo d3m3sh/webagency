@@ -1,7 +1,7 @@
 import { Check, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 // import { loadStripe } from '@stripe/stripe-js';
-import Checkout from './stripe/checkout';
+import Checkout from './stripe/Checkout';
 import { useState } from 'react';
 
 export function Pricing() {
