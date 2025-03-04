@@ -33,7 +33,7 @@ const Checkout = ({ amount, isOpen, onClose, planName }: {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ amount }),
+        body: JSON.stringify({ amount:amount*100 }),
       });
       const data = await response.json();
       setClientSecret(data.client_secret);
