@@ -71,7 +71,7 @@ export function ContactForm() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="text-purple-400" />
-                  <p>+33 4 43 56 78 79</p>
+                  <p>+33 6 46 23 09 91</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <MapPin className="text-purple-400" />
