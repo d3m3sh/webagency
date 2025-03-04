@@ -1,46 +1,19 @@
-import React from 'react';
 import { Check, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { loadStripe } from '@stripe/stripe-js';
-import toast from 'react-hot-toast';
-
-// Replace with your Stripe publishable key
-const stripePromise = loadStripe('your_publishable_key');
+// import { loadStripe } from '@stripe/stripe-js';
+import Checkout from './stripe/checkout';
+import { useState } from 'react';
 
 export function Pricing() {
   const { t } = useLanguage();
+  const [amount, setAmount] = useState(0);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState('');
 
-  const handlePayment = async (priceId: string, amount: number) => {
-    try {
-      const stripe = await stripePromise;
-      if (!stripe) throw new Error('Stripe failed to load');
-
-      // Create a checkout session
-      const response = await fetch('https://your-backend-url/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          priceId,
-          amount,
-        }),
-      });
-
-      const session = await response.json();
-
-      // Redirect to Stripe Checkout
-      const result = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-
-      if (result.error) {
-        toast.error(result.error.message || 'Payment failed');
-      }
-    } catch (error) {
-      console.error('Payment error:', error);
-      toast.error('Payment failed. Please try again.');
-    }
+  const handlePayment = async (priceId: string, amount: number, planName: string) => {
+    setAmount(amount);
+    setSelectedPlan(planName);
+    setIsCheckoutOpen(true);
   };
 
   const scrollToContact = () => {
@@ -160,7 +133,7 @@ export function Pricing() {
                     if (plan.custom) {
                       scrollToContact();
                     } else {
-                      handlePayment(plan.priceId, parseInt(plan.price));
+                      handlePayment(plan.priceId!, parseInt(plan.price), plan.name);
                     }
                   }}
                 >
@@ -179,6 +152,12 @@ export function Pricing() {
           </div>
         </div>
       </div>
+      <Checkout
+        amount={amount}
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        planName={selectedPlan}
+      />
     </section>
   );
 }
