@@ -52,7 +52,7 @@ function ContactPage() {
     </MainLayout>
   );
 }
-
+console.log("GA MEASUREMENT ID->", import.meta.env.VITE_GA_MEASUREMENT_ID)
 function App() {
   return (
     <>
