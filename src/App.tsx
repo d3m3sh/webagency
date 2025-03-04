@@ -6,6 +6,7 @@ import { ContactForm } from './components/ContactForm';
 import { LanguageSwitch } from './components/LanguageSwitch';
 import { Pricing } from './components/Pricing';
 import OrderComplete from './components/stripe/OrderComplete';
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -54,17 +55,19 @@ function ContactPage() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/fr" replace />} />
-      <Route path="/:lang">
-        <Route index element={<HomePage />} />
-
-        <Route path="tarifs" element={<PricingPage />} />
-        <Route path="portfolio" element={<PortfolioPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="order/complete" element={<OrderComplete />} />
-      </Route>
-    </Routes>
+    <>
+      <GoogleAnalytics measurementId={import.meta.env.VITE_GA_MEASUREMENT_ID} />
+      <Routes>
+        <Route path="/" element={<Navigate to="/fr" replace />} />
+        <Route path="/:lang">
+          <Route index element={<HomePage />} />
+          <Route path="tarifs" element={<PricingPage />} />
+          <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="order/complete" element={<OrderComplete />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
