@@ -58,7 +58,7 @@ const Checkout = ({ amount, isOpen, onClose, planName }: {
           <h3 className="text-xl font-semibold mb-2">Récapitulatif de la commande</h3>
           <div className="flex justify-between items-center">
             <span className="text-gray-600">{planName}</span>
-            <span className="text-lg font-medium">€{amount}</span>
+            <span className="text-lg font-medium">{amount}€</span>
           </div>
         </div>
 

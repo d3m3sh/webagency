@@ -114,7 +114,7 @@ export function Pricing() {
                 <h3 className="text-xl font-bold mb-4">{plan.name}</h3>
                 <div className="mb-6">
                   <div className="flex items-baseline">
-                    <span className="text-4xl font-bold">€{plan.price}</span>
+                    <span className="text-4xl font-bold">{plan.price}€</span>
                     {!plan.custom && <span className="text-gray-500 ml-2">{t('pricing.oneTime')}</span>}
                   </div>
                   <p className="text-gray-600 mt-2 text-sm">{plan.description}</p>
