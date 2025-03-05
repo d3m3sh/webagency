@@ -5,13 +5,14 @@ import terminalCV from '../assets/portfolio/terminal-cv.png';
 import naturePaysage from '../assets/portfolio/nature-paysage.png';
 import eleganceInterieur from '../assets/portfolio/elegance-interieur.png';
 import techExpert from '../assets/portfolio/tech-expert.png';
+import wineImg from '../assets/portfolio/caviste.png';
 
 const projects = [
   {
     title: "Nature Paysage",
     description: "Réalisation d'une landing page moderne pour un paysagiste, mettant en avant ses services et projets.",
     image: naturePaysage,
-    tags: ["Paysaiste", "Jardin", "Espace vert"],
+    tags: ["Paysagiste", "Jardin", "Espace vert"],
     url: "https://nature-paysage.vercel.app/"
   },
   {
@@ -20,6 +21,13 @@ const projects = [
     image: eleganceInterieur,
     tags: ["Décoration", "Interieur", "Élégance"],
     url: "https://elegance-interieur.vercel.app/"
+  },
+  {
+    title: "La cave du connaisseur",
+    description: "Réalisation d'une landing page moderne pour un caviste indépendant.",
+    image: wineImg,
+    tags: ["Vins", "Vitrine"],
+    url: "https://la-cave-du-connaisseur.vercel.app/"
   },
   {
     title: "Tech Expert",
